@@ -286,7 +286,7 @@ section:not(#page-home) .sorriso {
 
 section:not(#page-home) .assinatura {
     position: relative;
-    margin: 15px auto 0;
+    margin: -30px auto 0;
     display: block
 }
 

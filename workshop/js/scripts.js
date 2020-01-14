@@ -610,7 +610,7 @@ function countUp() {
             to: 69,
             speed: 1e3
         }), $(".number-awards").countTo({
-            to: 13,
+            to: 21,
             speed: 1e3
         }), $(".number-markers").countTo({
             to: 96,
