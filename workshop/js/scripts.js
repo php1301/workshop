@@ -604,16 +604,16 @@ function rolagem() {
 function countUp() {
     setTimeout(function () {
         $(".number-years").countTo({
-            to: 22,
+            to: 19,
             speed: 1e3
         }), $(".number-clients").countTo({
-            to: 125,
+            to: 69,
             speed: 1e3
         }), $(".number-awards").countTo({
-            to: 85,
+            to: 13,
             speed: 1e3
         }), $(".number-markers").countTo({
-            to: 19,
+            to: 96,
             speed: 1e3
         })
     }, 500)
@@ -693,7 +693,7 @@ function printAndUpload(a) {
     })
 }
 
-function animacoes() {
+function animation() {
     var a = new TimelineMax({
         repeat: -1,
         repeatDelay: 0
@@ -950,7 +950,7 @@ function links() {
     })
 }
 
-function carrosseis() {
+function carousel() {
     var a = (new Swiper("#swiper1", {
         loop: !0,
         autoplay: 0,
@@ -1097,22 +1097,22 @@ function video() {
 }
 
 function beginning() {
-    
+
 }
 function modal() {
     function a() {
-        $("#project").load(project, function () {
+        $("#project").load(project, function() {
             function a(a) {
                 a.mcs.top <= -484 && $(".carro-layer").addClass("ligado")
             }
             $("#project .details-content").mCustomScrollbar({
-                theme: "config",
+                theme: "dark",
                 callbacks: {
-                    onScroll: function () {
+                    onScroll: function() {
                         a(this)
                     }
                 }
-            }), anchor = $("#project .details-content").attr("data-anchor"), window.location.hash = "projects/" + anchor, $("#project video[autoplay]").each(function (a) {
+            }), anchor = $("#project .details-content").attr("data-anchor"), window.location.hash = "projects/" + anchor, $("#project video[autoplay]").each(function(a) {
                 $(this).trigger("play")
             }), $("#project").show(), TweenMax.to($("#project"), 1, {
                 css: {
@@ -1134,24 +1134,24 @@ function modal() {
                 opacity: 1,
                 delay: 1.5,
                 ease: Linear.easeNone
-            }), $(".fechar").on("click", function (a) {
+            }), $(".fechar").on("click", function(a) {
                 a.preventDefault(), TweenMax.to($("#project"), .5, {
                     css: {
                         opacity: 0
                     },
                     ease: Power4.easeOut
-                }), setTimeout(function () {
+                }), setTimeout(function() {
                     $("#project").empty(), $("#project").hide(), TweenMax.set($("#project"), {
                         clearProps: "all"
                     }), $.fn.fullpage.setMouseWheelScrolling(!0)
                 }, 500), window.location.hash = "projects"
-            }), $(".subir").on("click", function (a) {
+            }), $(".subir").on("click", function(a) {
                 a.preventDefault(), $("#project .details-content").mCustomScrollbar("scrollTo", "top", {
                     timeout: 100
                 }, {
                     scrollEasing: "linear"
                 })
-            }), $("#project .fechar").on("mouseover", function () {
+            }), $("#project .fechar").on("mouseover", function() {
                 TweenMax.to($("#project .fechar span:nth-child(1)"), .2, {
                     css: {
                         rotation: 35
@@ -1163,7 +1163,7 @@ function modal() {
                     },
                     ease: Power4.easeNone
                 })
-            }), $("#project .fechar").on("mouseleave", function () {
+            }), $("#project .fechar").on("mouseleave", function() {
                 TweenMax.to($("#project .fechar span:nth-child(1)"), .2, {
                     css: {
                         rotation: 45
@@ -1187,57 +1187,15 @@ function modal() {
             })
         })
     }
-    $("#area-work-hard .gallery").on("click", function (b) {
-        b.preventDefault(), $(".modal-content").removeClass("mover"), project = $(this).attr("data-file"), $.ajax({
-            url: "projectslocked.php",
-            type: "post",
-            data: "project=" + project,
-            success: function (b) {
-                if (1 == b) $("#id01").show(), $("#formlogin")[0].reset(), type = "project";
-                else {
-                    if (2 == b) return !1;
-                    a()
-                }
-            }
-        })
-    }), $("#id01 .fechar").on("mouseover", function () {
-        console.log("hover"), TweenMax.to($("#id01 .fechar span:nth-child(1)"), .2, {
-            css: {
-                rotation: 35
-            },
-            ease: Power4.easeNone
-        }), TweenMax.to($("#id01 .fechar span:nth-child(2)"), .2, {
-            css: {
-                rotation: -35
-            },
-            ease: Power4.easeNone
-        })
-    }), $("#id01 .fechar").on("mouseleave", function () {
-        TweenMax.to($("#id01 .fechar span:nth-child(1)"), .2, {
-            css: {
-                rotation: 45
-            },
-            ease: Power4.easeNone
-        }), TweenMax.to($("#id01 .fechar span:nth-child(2)"), .2, {
-            css: {
-                rotation: -45
-            },
-            ease: Power4.easeNone
-        })
-    }), $("#errolog").hide(), $("#formlogin").submit(function () {
-        var b = $("#pass").val();
-        return $(".modal-content").removeClass("mover"), $.ajax({
-            url: "login.php",
-            type: "post",
-            data: "pass=" + b,
-            success: function (b) {
-                1 == b ? ($("#id01").hide(), "project" == type ? a() : "video" == type && (videofancy(), console.log("chamou 1"))) : ($("#errolog").show(), $(".modal-content").addClass("mover"))
-            }
-        }), !1
+    $("#area-work-hard .gallery").on("click", function(b) {
+        console.log("ok")
+        b.preventDefault(), $(".modal-content").removeClass("mover"), project = $(this).attr("href"), 
+        a()
     })
+    
 }
 
-function jogo() {
+function tank() {
     var a, b, c = 1500,
         d = 400,
         e = 400,
@@ -1438,7 +1396,7 @@ function jogo() {
 
 }
 
-function responsividade() {
+function responsive() {
     $(".suggestion").on("click", function () { }), $(window).width() >= 1024 ? $("#responsive").hide() : $("#responsive").css("display", "table"), $(window).on("resize", function () {
         $("#qLtempOverlay").hide(), $(window).width() >= 1024 ? $("#responsive").hide() : $("#responsive").css("display", "table")
     })
@@ -1448,7 +1406,7 @@ function mobile() {
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? ($("#mobile").css("display", "block"), $("#responsive, #fullpage, #menu").hide()) : $("#mobile, #qLtempOverlay, #overlay").hide()
 }
 
-function nuvens() {
+function clouds() {
     TweenMax.to($(".cloud5"), 10, {
         css: {
             right: "100%"
@@ -1486,7 +1444,7 @@ function nuvens() {
     })
 }
 
-function coracoes() {
+function shape() {
     TweenMax.to($(".shape4"), 15, {
         css: {
             bottom: "100%"
@@ -1517,7 +1475,7 @@ function coracoes() {
     })
 }
 $(document).ready(function () {
-    browser(), carrosseis(), rolagem(), mouse(), desenho(), animacoes(), links(), beginning(), video(), modal(), jogo(), responsividade(), mobile(), nuvens(), coracoes()
+    browser(), carousel(), rolagem(), mouse(), desenho(), animation(), links(), beginning(), video(), modal(), tank(), responsive(), mobile(), clouds(), shape()
 }), $(window).load(function () {
     config()
 });

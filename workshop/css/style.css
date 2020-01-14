@@ -214,9 +214,11 @@
 .mCSB_scrollTools:hover .mCSB_dragger, .mCSB_scrollTools:hover .mCSB_draggerRail, .mCSB_scrollTools:hover.mCSB_scrollTools_vertical {
     width: 19px!important
 }
-.main-social a{
+
+.main-social a {
     margin: 20px;
 }
+
 .fancybox-lock, .layer, section {
     width: 100%
 }
@@ -3491,4 +3493,29 @@ span.psw {
     40%, 60% {
         transform: translate3d(calc(-50% + 4px), -50%, 0)
     }
+}
+
+#pview  .decor-wrapper{
+    cursor: pointer;
+    position: absolute;
+    z-index: 6;
+    left: 40px;
+    top: 40px;
+}
+
+#pview .decor-wrapper .magenta {
+    background: #ff0468!important;
+}
+
+#pview .decor-wrapper .decor {
+    width: 25px;
+    height: 5px;
+    border-radius: 5px;
+    background: #000;
+    margin-bottom: 5px;
+}
+
+#pview .decor-wrapper, #pview .decor-wrapper .decor {
+    transform-origin: center center;
+    display: block;
 }
