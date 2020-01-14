@@ -2461,8 +2461,8 @@ body {
 @media screen and (min-width:992px) and (min-height:700px) and (max-height:899px) {
     #page-home .config {
         width: 1200px;
-        left: calc(50% - 506px)!important;
-        top: calc(50% - 405px)!important
+        left: calc(38% - 506px)!important;
+        top: calc(-28% - 405px)!important;
     }
     #page-home .bracos {
         width: 470px;
