@@ -2409,8 +2409,8 @@ body {
 @media screen and (max-height:700px) {
     #page-home .config {
         width: 1000px;
-        left: calc(50% - 427px)!important;
-        top: calc(50% - 350px)!important
+        left: calc(39% - 427px)!important;
+        top: calc(-18% - 350px)!important
     }
     #page-home .bracos {
         width: 390px;
@@ -3493,29 +3493,4 @@ span.psw {
     40%, 60% {
         transform: translate3d(calc(-50% + 4px), -50%, 0)
     }
-}
-
-#pview  .decor-wrapper{
-    cursor: pointer;
-    position: absolute;
-    z-index: 6;
-    left: 40px;
-    top: 40px;
-}
-
-#pview .decor-wrapper .magenta {
-    background: #ff0468!important;
-}
-
-#pview .decor-wrapper .decor {
-    width: 25px;
-    height: 5px;
-    border-radius: 5px;
-    background: #000;
-    margin-bottom: 5px;
-}
-
-#pview .decor-wrapper, #pview .decor-wrapper .decor {
-    transform-origin: center center;
-    display: block;
 }
