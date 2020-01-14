@@ -599,7 +599,7 @@ body {
 
 #page-content .bt-page-content {
     position: absolute;
-    bottom: 40px;
+    bottom: 10px;
     left: 50%;
     transform: translate(-50%, 0);
     color: #000;
